@@ -1,0 +1,70 @@
+{{ define "main" }}
+<div class="@container">
+    <div class="@[480px]:p-4">
+        <div
+            class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+            style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("/images/hero-banner.jpg");'
+        >
+            <div class="flex flex-col gap-2 text-center">
+                <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                >
+                    Discover the Essence of Kerala with Cedarwood Collectives
+                </h1>
+                <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Immerse yourself in the ancient wisdom of Ayurveda amidst the tranquil beauty of Kerala. Experience rejuvenation and wellness at our curated hotels and
+                    resorts.
+                </h2>
+            </div>
+            <a href="/explore/" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#8ac043] text-[#151612] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                <span class="truncate">Explore</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-[#151612] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Hotels</h2>
+{{ range first 3 (where .Site.RegularPages "Section" "hotels") }}
+<div class="p-4 @container">
+    <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+        <div
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+            style='background-image: url("{{ if .Params.images }}{{ index .Params.images 0 | relURL }}{{ else }}/images/default-hotel.jpg{{ end }}");'
+        ></div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+            <p class="text-[#151612] text-lg font-bold leading-tight tracking-[-0.015em]">{{ .Title }}</p>
+            <div class="flex items-end gap-3 justify-between">
+                <p class="text-[#77816a] text-base font-normal leading-normal">
+                    {{ .Description }}
+                </p>
+                <a href="{{ .Permalink }}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#8ac043] text-[#151612] text-sm font-medium leading-normal">
+                    <span class="truncate">View Details</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+<h2 class="text-[#151612] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Ayurvedic Resort</h2>
+{{ range first 1 (where .Site.RegularPages "Section" "resorts") }}
+<div class="p-4 @container">
+    <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+        <div
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+            style='background-image: url("{{ if .Params.images }}{{ index .Params.images 0 | relURL }}{{ else }}/images/default-resort.jpg{{ end }}");'
+        ></div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+            <p class="text-[#151612] text-lg font-bold leading-tight tracking-[-0.015em]">{{ .Title }}</p>
+            <div class="flex items-end gap-3 justify-between">
+                <p class="text-[#77816a] text-base font-normal leading-normal">
+                    {{ .Description }}
+                </p>
+                <a href="{{ .Permalink }}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#8ac043] text-[#151612] text-sm font-medium leading-normal">
+                    <span class="truncate">Learn More</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ end }}

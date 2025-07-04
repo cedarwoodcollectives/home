@@ -1,0 +1,18 @@
+<footer class="flex justify-center">
+    <div class="flex max-w-[960px] flex-1 flex-col">
+        <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
+            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                {{ if .Site.GetPage "blog" }}
+                <a class="text-[#77816a] text-base font-normal leading-normal min-w-40" href="{{ "/blog/" | absLangURL }}">Blog</a>
+                {{ end }}
+                {{/* You can add more footer links here. For example, if you define a separate menu for footer in config.toml */}}
+                {{/*
+                {{ range .Site.Menus.footer }}
+                <a class="text-[#77816a] text-base font-normal leading-normal" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                {{ end }}
+                */}}
+            </div>
+            <p class="text-[#77816a] text-base font-normal leading-normal">© {{ now.Year }} {{ .Site.Params.copyright }}</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hotels on Cedarwood Collectives</title>
+    <link>http://localhost:1313/hotels/</link>
+    <description>Recent content in Hotels on Cedarwood Collectives</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2024 01:00:00 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/hotels/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Serene Sanctuary</title>
+      <link>http://localhost:1313/hotels/the-serene-sanctuary/</link>
+      <pubDate>Fri, 05 Jul 2024 01:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/hotels/the-serene-sanctuary/</guid>
+      <description>&lt;p&gt;Welcome to The Serene Sanctuary. This beautiful hotel offers a tranquil escape for those seeking rejuvenation through traditional Ayurvedic practices. Enjoy our lush gardens, spacious rooms, and personalized wellness programs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

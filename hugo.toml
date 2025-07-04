@@ -1,0 +1,57 @@
+baseURL = "http://localhost:1313/" # IMPORTANT: Change this to your live domain when deploying (e.g., "https://www.cedarwoodcollectives.com/")
+title = "Cedarwood Collectives"
+languageCode = "en-us"
+theme = "cedarwood" # Tell Hugo to use our custom theme
+enableRobotsTXT = true # Generates a robots.txt file for search engines
+enableGitInfo = false # Disable if you don't need Git info in your templates
+[pagination]
+  pagerSize = 10
+# Site-wide parameters for SEO and general information
+[params]
+  description = "Discover the essence of Kerala with Cedarwood Collectives. Immerse yourself in the ancient wisdom of Ayurveda amidst tranquil beauty at our curated hotels and resorts."
+  author = "Cedarwood Collectives Team"
+  keywords = ["Ayurveda", "Kerala", "Wellness Retreats", "Hotels", "Resorts", "India", "Panchakarma", "Yoga", "Meditation"]
+  copyright = "Cedarwood Collectives. All rights reserved."
+
+  # Default Open Graph (for social media shares like Facebook, LinkedIn)
+  [params.opengraph]
+    title = "Cedarwood Collectives: Ayurvedic Hotels & Resorts in Kerala"
+    description = "Discover a holistic wellness journey in Kerala, India. Cedarwood Collectives offers exclusive retreats blending traditional Ayurveda with luxurious comfort."
+    image = "/images/og-default-banner.jpg" # Path to a default social sharing image in static/images/
+
+  # Default Twitter Card (for X/Twitter shares)
+  [params.twitter]
+    card = "summary_large_image" # Options: summary, summary_large_image, app, player
+    site = "@CedarwoodColl" # Your site's Twitter handle (e.g., @YourHotel)
+    creator = "@CedarwoodColl" # Your content creator's Twitter handle
+    title = "Luxury Ayurvedic Retreats in Kerala by Cedarwood Collectives"
+    description = "Find your inner peace and rejuvenate with authentic Ayurvedic treatments at our stunning hotels and resorts in the heart of Kerala."
+    image = "/images/twitter-default-card.jpg" # Path to a default Twitter card image in static/images/
+
+  # Contact Information (optional, for use in footer or contact pages)
+  email = "info@cedarwoodcollectives.com"
+  phone = "+91 98765 43210"
+
+# Main navigation menu definition
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Hotels"
+    url = "/hotels/" # This URL will lead to a list page for hotels
+    weight = 20
+  [[menu.main]]
+    name = "Resorts"
+    url = "/resorts/" # This URL will lead to a list page for resorts
+    weight = 30
+  [[menu.main]]
+    name = "Contact Us"
+    url = "/contact/" # This URL will lead to a single contact page
+    weight = 40
+  [[menu.main]]
+    name = "Book Now"
+    url = "/book-now/" # This URL will lead to a single booking page
+    weight = 50
+    identifier = "book-now-button" # Unique identifier for styling this specific menu item as a button

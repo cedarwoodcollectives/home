@@ -1,0 +1,21 @@
+{{ range first 3 (where .Site.RegularPages "Section" "hotels") }}
+<div class="p-4 @container">
+    <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start">
+        <div
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+            style='background-image: url("{{ if .Params.images }}{{ index .Params.images 0 | relURL }}{{ else }}/images/default-hotel.jpg{{ end }}");'
+        ></div>
+        <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4">
+            <p class="text-[#151612] text-lg font-bold leading-tight tracking-[-0.015em]">{{ .Title }}</p>
+            <div class="flex items-end gap-3 justify-between">
+                <p class="text-[#77816a] text-base font-normal leading-normal">
+                    {{ .Description }}
+                </p>
+                <a href="{{ .Permalink }}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#8ac043] text-[#151612] text-sm font-medium leading-normal">
+                    <span class="truncate">View Details</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
